@@ -2,15 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { NavtoolComponent } from './navtool/navtool.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavtoolComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    { provide: '$window',  useValue: window }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
